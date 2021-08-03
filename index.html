@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>プリシミュ</title>
-  </head>
-  <body>
-    <form action="">
-      <label for="chara">
-        キャラ名
-        <input type="text" />
-      </label>
-      <label for="">
-        ハード数
-        <input type="text" />
-      </label>
-      <label for="">
-        現在の石の数
-        <input type="text" />
-      </label>
-      <input type="submit" value="計算" />
-    </form>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>プリシミュ</title>
+</head>
+
+<body>
+  <form name="form" action="">
+    <label for="chara">
+      キャラの星の数
+      <select name="starCount" class="js-starCount">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </label>
+    <label for="">
+      ハードステージ数
+      <select name="hardStageCount" class="js-hardStageCount">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </label>
+    <label for="">
+      現在の石の数
+      <input type="text" class="js-stoneCount" value="" />
+    </label>
+  </form>
+  <p>星６になるのに <span class="js-result"></span>日かかります</p>
+  <script src="main.js"></script>
+</body>
+
 </html>
