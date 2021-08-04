@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="プリコネのキャラを星6に才能開花させるまでに必要な日数などを計算するツールです。">
+  <link rel="icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="style.css">
   <title>プリシミュ</title>
 </head>
@@ -12,7 +14,6 @@
 <body>
   <main class="width">
     <h1 class="title">プリシミュ</h1>
-
     <section class="memoPiSection">
       <h2 class="memoPiTitle">メモリーピース計算</h2>
       <form name="form" action="">
@@ -31,7 +32,7 @@
           <select name="hardStageCount" class="js-hardStageCount">
             <option value="1">1</option>
             <option value="2">2</option>
-            <option value="3">3</option>
+            <option value="3" selected>3</option>
             <option value="4">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
@@ -48,7 +49,6 @@
       <p>星6になるためのメモリーピースを集めるのに<span class="js-needMemoPi needMemoPi"></span>日かかります
       </p>
     </section>
-
     <section class="pureMemoPiSection">
       <h2 class="pureMemoPiTitle">ピュアメモリーピース計算</h2>
       <form name="form" action="">
@@ -57,7 +57,7 @@
           <select name="stageClearCount" class="js-stageClearCount">
             <option value="1">1</option>
             <option value="2">2</option>
-            <option value="3">3</option>
+            <option value="3" selected>3</option>
           </select>
         </label>
         <label for="">

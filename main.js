@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  // メモリーピース
+  // メモリーピースに関する変数
   const KAKURITSU_OF_MEMORYPIECE = 0.5;
   const hardStageCount = document.querySelector('.js-hardStageCount');
   let hardStageCountVal = hardStageCount.value;
@@ -25,7 +25,7 @@
 
   const NeedMemoPi = document.querySelector('.js-needMemoPi');
 
-  // ピュアメモリーピース
+  // ピュアメモリーピースに関する変数
   const KAKURITSU_OF_PUREMEMORYPIECE = 0.5;
 
   const stageClearCount = document.querySelector('.js-stageClearCount');
@@ -33,11 +33,21 @@
 
   const pureMemoPiCount = document.querySelector('.js-pureMemoPiCount');
   let pureMemoPiCountVal = pureMemoPiCount.value;
+
   const NeedPureMemoPi = document.querySelector('.js-needPureMemoPi');
 
+  // メモリーピースを集めるのに必要な日数の初期表示
+  NeedMemoPi.textContent = Math.round((charaMemoPi - stoneCountVal - soubiNeedsMemoPi) / (hardStageCountVal * 3 * KAKURITSU_OF_MEMORYPIECE), 10);
+
+  // ピュアメモリーピースを集めるのに必要な日数の初期表示
   NeedPureMemoPi.textContent = Math.round((50 - pureMemoPiCountVal) / (stageClearCountVal * KAKURITSU_OF_PUREMEMORYPIECE), 10);
 
-  NeedMemoPi.textContent = Math.round((charaMemoPi - stoneCountVal - soubiNeedsMemoPi) / (hardStageCountVal * 3 * KAKURITSU_OF_MEMORYPIECE), 10);
+
+  // 現在のピュアメモリーピース数が変わった時
+  pureMemoPiCount.addEventListener('change', (event) => {
+    pureMemoPiCountVal = event.target.value;
+    NeedPureMemoPi.textContent = Math.round((50 - pureMemoPiCountVal) / (stageClearCountVal * KAKURITSU_OF_PUREMEMORYPIECE), 10);
+  })
 
   // メモリーピースのイベント
   // キャラの星数が変わった時
@@ -59,7 +69,7 @@
     NeedMemoPi.textContent = Math.round((charaMemoPi - stoneCountVal - soubiNeedsMemoPi) / (hardStageCountVal * 3 * KAKURITSU_OF_MEMORYPIECE), 10);
   })
 
-  // メモリーピース数が変わった時
+  // 現在のメモリーピース数が変わった時
   stoneCount.addEventListener('change', (event) => {
     stoneCountVal = event.target.value;
     NeedMemoPi.textContent = Math.round((charaMemoPi - stoneCountVal - soubiNeedsMemoPi) / (hardStageCountVal * 3 * KAKURITSU_OF_MEMORYPIECE), 10);
@@ -71,4 +81,6 @@
     stageClearCountVal = event.target.value;
     NeedPureMemoPi.textContent = Math.round((50 - pureMemoPiCountVal) / (stageClearCountVal * KAKURITSU_OF_PUREMEMORYPIECE), 10);
   })
+
+
 }());
