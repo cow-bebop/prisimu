@@ -5,38 +5,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css">
   <title>プリシミュ</title>
 </head>
 
 <body>
-  <form name="form" action="">
-    <label for="chara">
-      キャラの星の数
-      <select name="starCount" class="js-starCount">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-    </label>
-    <label for="">
-      ハードステージ数
-      <select name="hardStageCount" class="js-hardStageCount">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
-    </label>
-    <label for="">
-      現在の石の数
-      <input type="text" class="js-stoneCount" value="" />
-    </label>
-  </form>
-  <p>星６になるのに <span class="js-result"></span>日かかります</p>
+  <div class="width">
+    <h1 class="title">プリシミュ</h1>
+    <section class="memoPiSection">
+      <h2 class="memoPiTitle">メモリーピース収集日数計算</h2>
+      <form name="form" action="">
+        <label for="chara">
+          キャラの星の数
+          <select name="starCount" class="js-starCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+        <label for="">
+          ハードステージ数
+          <select name="hardStageCount" class="js-hardStageCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </label>
+        <label for="soubi">
+          <input type="checkbox" name="soubi" class="js-soubi" id="soubi" checked>専用装備あり
+        </label>
+        <label for="">
+          現在の石の数
+          <input type="text" class="js-stoneCount" value="0" />
+        </label>
+      </form>
+      <p>星6になるためのメモリーピースを集めるのに<span class="js-needMemoPi needMemoPi"></span>日かかります
+      </p>
+    </section>
+  </div>
+
   <script src="main.js"></script>
 </body>
 

@@ -1,0 +1,15 @@
+.width {
+  width: 980px;
+  margin: 30px auto;
+}
+
+label {
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.needMemoPi {
+  font-weight: bold;
+  font-size: 20px;
+}
