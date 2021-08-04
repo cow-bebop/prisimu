@@ -10,10 +10,11 @@
 </head>
 
 <body>
-  <div class="width">
+  <main class="width">
     <h1 class="title">プリシミュ</h1>
+
     <section class="memoPiSection">
-      <h2 class="memoPiTitle">メモリーピース収集日数計算</h2>
+      <h2 class="memoPiTitle">メモリーピース計算</h2>
       <form name="form" action="">
         <label for="chara">
           キャラの星の数
@@ -40,14 +41,34 @@
           <input type="checkbox" name="soubi" class="js-soubi" id="soubi" checked>専用装備あり
         </label>
         <label for="">
-          現在の石の数
-          <input type="text" class="js-stoneCount" value="0" />
+          現在のメモリーピース数
+          <input type="text" class="js-stoneCount" value="5" />
         </label>
       </form>
       <p>星6になるためのメモリーピースを集めるのに<span class="js-needMemoPi needMemoPi"></span>日かかります
       </p>
     </section>
-  </div>
+
+    <section class="pureMemoPiSection">
+      <h2 class="pureMemoPiTitle">ピュアメモリーピース計算</h2>
+      <form name="form" action="">
+        <label for="">
+          一日何回回る？
+          <select name="stageClearCount" class="js-stageClearCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+        <label for="">
+          現在のピュアメモリーピース数
+          <input type="text" class="js-pureMemoPiCount" value="5" />
+        </label>
+      </form>
+      <p>ピュアメモリーピースを集めるのに<span class="js-needPureMemoPi needPureMemoPi"></span>日かかります
+      </p>
+    </section>
+  </main>
 
   <script src="main.js"></script>
 </body>
