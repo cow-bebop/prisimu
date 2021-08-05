@@ -1,0 +1,33 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+.culculateSec {
+  width: 900px;
+  margin: 30px auto  0;
+}
+.saveSec {
+  width: 300px;
+  margin: 30px auto 0;
+}
+
+.save {
+  margin-top: 10px;
+}
+
+section {
+  margin-top: 50px;
+}
+
+label {
+  width: 100%;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.needMemoPi, .needPureMemoPi {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 4px;
+}
