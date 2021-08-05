@@ -1,6 +1,19 @@
-.width {
-  width: 980px;
-  margin: 30px auto;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+.culculateSec {
+  width: 900px;
+  margin: 30px auto  0;
+}
+.saveSec {
+  width: 300px;
+  margin: 30px auto 0;
+}
+
+.save {
+  margin-top: 10px;
 }
 
 section {

@@ -12,64 +12,76 @@
 </head>
 
 <body>
-  <main class="width">
-    <h1 class="title">プリシミュ</h1>
-    <section class="memoPiSection">
-      <h2 class="memoPiTitle">メモリーピース計算</h2>
-      <form name="form" action="">
-        <label for="chara">
-          キャラの星の数
-          <select name="starCount" class="js-starCount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+  <div class="container">
+    <section class="culculateSec">
+      <h1 class="title">プリシミュ</h1>
+      <section class="charaSelectSec">
+        <label>
+          キャラを選んでね
+          <select name="charaListSelect" class="js-charaListSelect"></select>
         </label>
-        <label for="">
-          ハードステージ数
-          <select name="hardStageCount" class="js-hardStageCount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3" selected>3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-          </select>
-        </label>
-        <label for="soubi">
-          <input type="checkbox" name="soubi" class="js-soubi" id="soubi" checked>専用装備あり
-        </label>
-        <label for="">
-          現在のメモリーピース数
-          <input type="text" class="js-stoneCount" value="5" />
-        </label>
-      </form>
-      <p>星6になるためのメモリーピースを集めるのに<span class="js-needMemoPi needMemoPi"></span>日かかります
-      </p>
-    </section>
-    <section class="pureMemoPiSection">
-      <h2 class="pureMemoPiTitle">ピュアメモリーピース計算</h2>
-      <form name="form" action="">
-        <label for="">
-          一日何回回る？
-          <select name="stageClearCount" class="js-stageClearCount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3" selected>3</option>
-          </select>
-        </label>
-        <label for="">
-          現在のピュアメモリーピース数
-          <input type="text" class="js-pureMemoPiCount" value="5" />
-        </label>
-      </form>
-      <p>ピュアメモリーピースを集めるのに<span class="js-needPureMemoPi needPureMemoPi"></span>日かかります
-      </p>
-    </section>
-  </main>
+        <button class="js-save save">保存</button>
+      </section>
 
+      <section class="memoPiSection">
+        <h2 class="memoPiTitle">メモリーピース計算</h2>
+        <form name="form" action="">
+          <label for="chara">
+            キャラの星の数
+            <select name="starCount" class="js-starCount">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+          <label for="">
+            ハードステージ数
+            <select name="hardStageCount" class="js-hardStageCount">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <label for="soubi">
+            <input type="checkbox" name="soubi" class="js-soubi" id="soubi" checked>専用装備あり
+          </label>
+          <label for="">
+            現在のメモリーピース数
+            <input type="text" class="js-stoneCount" value="5" />
+          </label>
+        </form>
+        <p>星6になるためのメモリーピースを集めるのに<span class="js-needMemoPi needMemoPi"></span>日かかります
+        </p>
+      </section>
+      <section class="pureMemoPiSection">
+        <h2 class="pureMemoPiTitle">ピュアメモリーピース計算</h2>
+        <form name="form" action="">
+          <label for="">
+            一日何回回る？
+            <select name="stageClearCount" class="js-stageClearCount">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+            </select>
+          </label>
+          <label for="">
+            現在のピュアメモリーピース数
+            <input type="text" class="js-pureMemoPiCount" value="5" />
+          </label>
+        </form>
+        <p>ピュアメモリーピースを集めるのに<span class="js-needPureMemoPi needPureMemoPi"></span>日かかります
+        </p>
+      </section>
+    </section>
+    <section class="saveSec">
+      保存情報
+    </section>
+  </div>
   <script src="main.js"></script>
 </body>
 
