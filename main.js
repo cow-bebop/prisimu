@@ -103,17 +103,28 @@
 
     for (const newContent of newContentArray) {
       // optionタグを作成する
-      const option = document.createElement("option");
-      // optionタグのテキストを4に設定する
+      const option = document.createElement('option');
       option.text = newContent;
-      // optionタグのvalueを4に設定する
       option.value = newContent;
       // selectタグの子要素にoptionタグを追加する
       charaListSelect.appendChild(option);
     };
   };
 
+  // 保存情報リスト
+  // const save = (charaName) => {
+  //   const saveList = document.querySelector('.js-saveList');
+  //   const saveButton = document.querySelector('.js-saveButton');
+  //   const li = document.createElement('li');
+  //   li.text = charaName;
+
+  //   saveButton.addEventListener('click', () => {
+  //     saveList.appendChild(li);
+  //   });
+  // };
+
   addOption();
   memoPi();
   pureMemoPi();
+  // save();
 }());
